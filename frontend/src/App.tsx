@@ -14,6 +14,7 @@ import { useAppContext } from "./contexts/AppContexts";
 import MyHotels from "./pages/MyHotels"; // Import the MyHotels component
 import EditHotel from "./pages/EditHotel";
 import Search from "./pages/Search";
+import Detail from "./pages/Detail";
 
 const App = () =>{
   const {isLoggedIn} = useAppContext();
@@ -23,6 +24,7 @@ const App = () =>{
       <Routes>
         <Route path="/" element={<Layout><p>Home Page</p></Layout>}/>
         <Route path="/search" element={<Layout><Search/></Layout>} />
+        <Route path="/detail/:hotelId" element={<Layout><Detail/></Layout>} />
         <Route path = "/register" element={<Layout>
           <Register />
           </Layout>}/>
